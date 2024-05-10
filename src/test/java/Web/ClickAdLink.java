@@ -11,7 +11,7 @@ public class ClickAdLink {
 
 	public static void main(String[] args) {
 
-		// Initialize ChromeDriver
+		
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://rydesharing.com/");
@@ -22,10 +22,10 @@ public class ClickAdLink {
 		WebElement adBanner = driver.findElement(By.xpath(
 				"//div[@class='elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1535567b']//div[@class='elementor-widget-wrap elementor-element-populated e-swiper-container']"));
 
-		// Get the window handle of the main window
+		
 		String mainWindowHandle = driver.getWindowHandle();
 
-		// Click on the ad banner (opens link in new tab)
+		// Click on the ad banner 
 		adBanner.click();
 
 		// Switch to the newly opened tab
@@ -49,7 +49,7 @@ public class ClickAdLink {
 					"Clicking on the ad banner does not redirect to a URL starting with 'https://rydesharing.com/'.");
 		}
 
-		// Close the newly opened tab
+		
 		driver.close();
 
 		// Switch back to the main window
